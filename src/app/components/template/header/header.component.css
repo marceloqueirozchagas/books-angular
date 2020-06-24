@@ -1,0 +1,14 @@
+.header {
+    display: flex;    
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.menu {
+    display: flex;
+}
+
+.active-menu {
+    border: 1px solid lightgray;
+}

@@ -1,0 +1,22 @@
+<div class="mat-elevation-z4">
+    <mat-progress-bar mode="query" *ngIf="showLoad"></mat-progress-bar>
+    <mat-action-list>
+        <div *ngFor="let year of years">
+            <a mat-list-item (click)="handleYearClick(year)" > 
+                <h3 matLine> {{ year.year }} </h3>
+                <p matLine> {{ year.total_authors }} Autores </p>
+                <p matLine> {{ year.total_books }} Livros </p>
+                <p matLine> {{ year.total_pages }} Páginas </p>            
+            </a>       
+            <ul *ngIf="year.show_books">
+                <li *ngFor="let book of year.books">
+                    <a (click)="handleBookClick(book)">
+                        <span>{{ book.title }}</span>
+                        <p>{{ book.pages }} Páginas</p>
+                    </a>
+                </li>
+            </ul>
+        <mat-divider></mat-divider>
+    </div> 
+    </mat-action-list>
+</div>

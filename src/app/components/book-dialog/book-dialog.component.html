@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{ data.title  }}</h2>
+
+<mat-dialog-content class="mat-typography">
+    <h3>{{ data.publisher}}</h3>
+    <img [src]="data.imageLinks" alt="capa" *ngIf="data.imageLinks !== ''">
+    <p>{{ data.description }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Fechar</button>
+</mat-dialog-actions>

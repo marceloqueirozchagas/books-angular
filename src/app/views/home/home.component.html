@@ -1,0 +1,41 @@
+<mat-progress-bar mode="query" *ngIf="showLoad"></mat-progress-bar>
+<mat-card class="home mat-elevation-z3">   
+    <mat-card-header>
+        <mat-card-title >
+            Bem Vindo!
+        </mat-card-title>
+        <mat-card-subtitle class="type_writer" >
+            Um pequeno sistema em Angular para fazer o registro das minhas leituras
+        </mat-card-subtitle>
+    </mat-card-header>   
+    <mat-divider></mat-divider>
+    <mat-card-content>        
+        <mat-list>
+            <mat-list-item>
+                <i  mat-list-icon class="material-icons" >person</i>
+                <div mat-line id="total_author">{{ booksInfo.authors }}</div>
+                <div mat-line id="author">Autores</div>   
+            </mat-list-item>
+            <mat-list-item>
+                <i  mat-list-icon class="material-icons" >books</i>
+                <div mat-line>{{ booksInfo.books }}</div>
+                <div mat-line>Livros</div>   
+            </mat-list-item>
+            <mat-list-item>
+                <i  mat-list-icon class="material-icons" >analytics</i>
+                <div mat-line>{{ booksInfo.pages }}</div>
+                <div mat-line>Páginas</div>   
+            </mat-list-item>
+           </mat-list>
+    </mat-card-content>
+
+    <div class="chart-wrapper">
+        <canvas baseChart 
+        [datasets]="barChartData"
+        [labels]="years"
+        [colors]="lineChartColors" 
+        legend="true"
+        chartType="bar">
+      </canvas>
+    </div>
+</mat-card>

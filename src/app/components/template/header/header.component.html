@@ -1,0 +1,13 @@
+<mat-toolbar class="header mat-elevation-z4">
+        <span>Marcelo Queiroz - Registro de Leituras</span>
+
+        <div class="menu">
+            <button mat-button 
+                *ngFor="let menu of menus" 
+                [routerLink]="menu.path"
+                [ngClass]="{'active-menu' : menu.path === actualPath}"
+            >
+                {{menu.name}}
+            </button>
+        </div>
+</mat-toolbar>

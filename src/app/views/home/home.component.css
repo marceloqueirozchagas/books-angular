@@ -1,0 +1,17 @@
+.type_writer{
+    font-weight: bold;
+}
+.type_writer::after{
+    content:'|';
+    animation: blink .7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+

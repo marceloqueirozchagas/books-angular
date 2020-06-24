@@ -1,0 +1,15 @@
+<div class="mat-elevation-z4">
+    <mat-progress-bar mode="query" *ngIf="showLoad"></mat-progress-bar>
+    
+    <mat-action-list>
+        <button mat-list-item 
+            *ngFor="let book of books"
+            (click)="handleBookClick(book)"
+        > 
+            <mat-divider></mat-divider>    
+            <h3 matLine> {{ book.title }} </h3>
+            <p matLine> {{ book.author }} </p>
+            <p matLine> {{ book.pages }} Páginas </p>            
+        </button>        
+    </mat-action-list>
+</div>
